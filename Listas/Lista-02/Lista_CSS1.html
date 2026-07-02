@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista CSS 1 - PPI 2026-1</title>
+    <style>
+        span {
+            background-color: #3498db;
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+
+        h2 {
+            color: black;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        section {
+            background: snow;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        pre,
+        code {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .demo {
+            border: 2px dashed #3498db;
+            padding: 15px;
+            margin: 15px 0;
+            background: #f8f9fa;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Lista de Atividades CSS 1</h1>
+    <p><strong>Aluno:</strong> [Seu Nome] | <strong>Disciplina:</strong> PPI 2026-1</p>
+
+    <h1>Questão - 1</h1>
+    <section id="atividade1">
+        <h2>Atividade 1 – O que é uma regra CSS?</h2>
+        <p>Uma <strong>regra CSS</strong> é a unidade básica de estilização. Ela é composta por:</p>
+        <ul>
+            <li><strong>Seletor:</strong> Define o elemento alvo</li>
+            <li><strong>Propriedade:</strong> Característica que será alterada</li>
+            <li><strong>Valor:</strong> O estilo aplicado</li>
+        </ul>
+        <p><strong>Exemplo:</strong></p>
+        <pre><code>p { color: green; font-size: 18px; }</code></pre>
+    </section>
+
+    <h1>Questão - 2</h1>
+    <section id="atividade2">
+        <h2>Atividade 2 – Página com Título e Parágrafos</h2>
+        <div class="demo">
+            <h1 style="color: #e74c3c;">Título Principal</h1>
+
+            <p style="color: #2c3e50; font-family: Arial, sans-serif;">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Aqui foi usado span e fica <span>assim</span>.
+            </p>
+
+            <p style="color: #27ae60; font-family: 'Courier New', monospace;">
+                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Outra <span style="color:#8e44ad; font-style:italic;">palavra destacada</span> com estilo diferente.
+            </p>
+
+            <p style="color: #2980b9; font-family: Verdana, sans-serif;">
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+            </p>
+        </div>
+    </section>
+
+    <h1>Questão - 3</h1>
+    <section id="atividade3">
+        <h2>Atividade 3 – Formas de incluir CSS</h2>
+        <ul>
+            <li><strong>Inline:</strong> Atributo <code>style</code> direto na tag</li>
+            <li><strong>Interno:</strong> Tag <code>&lt;style&gt;</code> dentro do <code>&lt;head&gt;</code></li>
+            <li><strong>Externo:</strong> Arquivo <code>.css</code> via <code>&lt;link rel="stylesheet"&gt;</code></li>
+        </ul>
+        <p>Este documento demonstra as três formas simultaneamente.</p>
+    </section>
+
+    <h1>Questão - 4</h1>
+    <section id="atividade4">
+        <h2>Atividade 4 – Especificidade de Seletores</h2>
+        <p>Veja o exemplo abaixo e observe as cores aplicadas conforme a especificidade:</p>
+
+        <style>
+            li {
+                color: red;
+            }
+
+            .churras {
+                color: green;
+            }
+
+            .fruta {
+                color: gray;
+            }
+
+            li+li.churras {
+                color: black;
+            }
+
+            .churras[draggable="true"] {
+                color: magenta;
+            }
+
+            #lip1,
+            #lip2,
+            #lip3 {
+                color: blue;
+            }
+
+            #lip3.fruta {
+                color: orange;
+            }
+
+            ol>li.churras#lip5 {
+                color: purple;
+            }
+        </style>
+
+        <ol>
+            <li id="lip0">Abacaxi</li>
+            <li class="fruta">Melão</li>
+            <li id="lip2" class="fruta">Pera</li>
+            <li id="lip3" class="fruta">Uva</li>
+            <li id="lip4" class="fruta">Maçã</li>
+            <li class="churras">Carne</li>
+            <li class="churras">Linguiça</li>
+            <li id="lip7" class="churras" draggable="true">Pão de alho</li>
+        </ol>
+        <small><em>Analise o código CSS acima para entender a prioridade das regras.</em></small>
+    </section>
+
+
+    <h1>Questão - 10</h1>
+    <section id="atividade10">
+        <h2>Atividade 10 – Barquinho Animado</h2>
+        <div
+            style="position:relative; height:400px; background: linear-gradient(#87CEEB 70%, #1e90ff 100%); overflow:hidden; border:1px solid #000;">
+
+            <div
+                style="position:absolute; bottom:0; width:100%; height:45%; background: linear-gradient(#006994, #00bfff);">
+            </div>
+
+            <div
+                style="position:absolute; bottom:90px; left:0; font-size:70px; animation: navegar 18s linear infinite, balanco 3s ease-in-out infinite;">
+                🛶
+            </div>
+        </div>
+
+        <style>
+            @keyframes navegar {
+                from {
+                    left: -100px;
+                }
+
+                to {
+                    left: 100%;
+                }
+            }
+
+            @keyframes balanco {
+
+                0%,
+                100% {
+                    transform: rotate(-12deg);
+                }
+
+                50% {
+                    transform: rotate(12deg);
+                }
+            }
+        </style>
+    </section>
+
+</body>
+
+</html>

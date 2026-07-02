@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+</head>
+<body>
+
+    <div id="menu">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="historia_web.html">História da Web</a></li>
+            <li><a href="http.html">HTTP</a></li>
+            <li><a href="estados.html">Estados</a></li>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="curriculo.html">Currículo</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </div>
+    
+    <h1>Contato</h1>
+    <hr>
+    <p>Preencha o formulário abaixo para entrar em contato. Os campos marcados são obrigatórios.</p>
+
+    <p><a href="curriculo.html">← Voltar para o Currículo</a></p>
+
+    <form>
+
+        <label for="nome">Nome:</label><br>
+        <input type="text" id="nome" placeholder="Digite seu nome" required><br><br>
+
+        <label for="email">E-mail:</label><br>
+        <input type="email" id="email" placeholder="Digite seu e-mail" required><br><br>
+
+        <label for="assunto">Assunto:</label><br>
+        <input type="text" id="assunto" placeholder="Digite o assunto"><br><br>
+
+        <label for="estado">Estado:</label><br>
+        <select id="estado">
+            <option>Selecione um estado</option>
+            <option>Santa Catarina</option>
+            <option>Paraná</option>
+            <option>Rio Grande do Sul</option>
+            <option>São Paulo</option>
+            <option>Rio de Janeiro</option>
+            <option>Minas Gerais</option>
+        </select><br><br>
+
+        <label for="mensagem">Mensagem:</label><br>
+        <textarea id="mensagem" rows="5" cols="40" placeholder="Digite sua mensagem"></textarea><br><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
